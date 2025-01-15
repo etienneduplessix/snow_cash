@@ -93,20 +93,14 @@ creat scripte in tmp
 ```
 #!/usr/bin/python
 import sys
-```
-
->Read the token file content
-content = open("/home/user/level09/token").readline()
-
->Iterate over the characters in the content
-
-```
-for i, c in enumerate(content):
-    try:
-        # Manipulate and print the character based on the loop index
+i = -1
+content = open("/home/user/level09/token").readlines()[0]
+for c in content:
+   i += 1
+     try:
         sys.stdout.write(chr(ord(c) - i))
-    except Exception as e:
-        # Handle specific exceptions if necessary
+     except:
         pass
+
+print()
 ```
->Print a newline at the end: print()
